@@ -60,7 +60,7 @@ El producto mínimo viable incluye:
 - **Notificaciones:** Integración con servicios de correo.
 
 ---
-![Diagrama de Arquitectura](https://raw.githubusercontent.com/MarioLuisP/No-Country-simulation/C22-05-webapp/qa-testing/Images/ESQUEMA3.jpg)
+![Diagrama de Arquitectura](https://raw.githubusercontent.com/No-Country-simulation/C22-05-webapp/QA-Testing/Images/ESQUEMA3.jpg)
 
 
 ¡Gracias por contribuir a este proyecto! Si tienes sugerencias o mejoras, no dudes en hacer un pull request.
