@@ -28,7 +28,7 @@ Los pacientes son los usuarios finales del sistema, con funcionalidades que les 
   - Rama de especialidad (si aplica).
   - Urgencia o no urgencia.
 - **Datos automatizados:** Al estar logueados, el formulario se autocompleta con los datos del registro
-- **Confirmación de citas:** Reciben detalles de su cita por correo y WhatsApp, incluyendo fecha, hora y motivo de consulta.
+- **Confirmación de citas:** Reciben detalles de su cita por correo, incluyendo fecha, hora y motivo de consulta.
 
 ---
 
@@ -60,5 +60,6 @@ El producto mínimo viable incluye:
 - **Notificaciones:** Integración con servicios de correo.
 
 ---
+![Diagrama de Arquitectura]Images/ESQUEMA3.jpg
 
 ¡Gracias por contribuir a este proyecto! Si tienes sugerencias o mejoras, no dudes en hacer un pull request.
