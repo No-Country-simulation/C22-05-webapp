@@ -60,6 +60,7 @@ El producto mínimo viable incluye:
 - **Notificaciones:** Integración con servicios de correo.
 
 ---
-![Diagrama de Arquitectura]Images/ESQUEMA3.jpg
+![Diagrama de Arquitectura](Images/ESQUEMA3.jpg)
+
 
 ¡Gracias por contribuir a este proyecto! Si tienes sugerencias o mejoras, no dudes en hacer un pull request.
