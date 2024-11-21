@@ -54,9 +54,9 @@ El producto mínimo viable incluye:
 ---
 
 ## **Tecnologías Propuestas**
-- **Frontend:** Angular con Node.js.
+- **Frontend:** Css-Html-Js-Vue
 - **Backend:** Java con Spring Boot e Hibernate.
-- **Base de datos:** MySQL/PostgreSQL.
+- **Base de datos:** MySQL
 - **Notificaciones:** Integración con servicios de correo.
 
 ---
