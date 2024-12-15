@@ -1,0 +1,158 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* Button Styles */
+button, .filter-button {
+  font-size: 24px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #118185;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s, transform 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:hover, .filter-button:hover {
+  background-color: #0B4F52;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:focus, .filter-button:focus {
+  outline: none;
+  border: 2px solid #0B4F52;
+  box-shadow: 0 0 5px 2px rgba(11, 79, 82, 0.5);
+}
+
+/* Navbar */
+.navbar {
+  background-color: #118185;
+  color: white;
+}
+
+/* Columns */
+.emergency-column, .appointment-column {
+  max-height: 600px;
+  overflow-y: auto;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+/* Cards */
+.card {
+  background-color: rgb(240, 230, 184);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Doctor Cards */
+.doctor-card {
+  border: 2px solid transparent;
+  transition: transform 0.2s, border-color 0.2s;
+  height: 200px;
+  max-width: 180px;
+}
+
+.doctor-card img {
+  height: 80px;
+  object-fit: cover;
+}
+
+.doctor-card:hover {
+  transform: scale(1.02);
+  border-color: #118185;
+}
+
+.doctor-card.selected {
+  background-color: #D1E8E2;
+  border-color: #118185;
+}
+#card-container {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  transition: opacity 0.3s, visibility 0.3s, height 0.3s;
+}
+
+#card-container.show {
+  opacity: 1;
+  visibility: visible;
+  height: auto;
+}
+
+/* Inputs in Additional Box */
+.custom-container {
+  background-color: #D1E8E2;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.custom-container input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Modal */
+.modal-backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #8fc1f3; /* Color de fondo elegante */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.modal-header {
+  border-bottom: none; /* Sin borde inferior */
+}
+
+.modal-title {
+  font-family: 'Georgia', serif; /* Fuente elegante */
+  font-size: 24px; /* Tamaño de fuente */
+}
+
+.modal-body {
+  font-family: 'Arial', sans-serif; /* Fuente legible */
+  font-size: 18px; /* Tamaño de fuente */
+  color: #333; /* Color del texto */
+}
+
+.email-animation {
+  margin-bottom: 15px;
+}
+
+.email-icon {
+  width: 50px; /* Ajusta el tamaño del icono */
+  animation: bounce 1s infinite; /* Animación de rebote */
+}
+
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0) scale(1); /* Tamaño original */
+  }
+  50% {
+      transform: translateY(-15px) scale(1.1); /* Rebote hacia arriba y aumento de tamaño */
+  }
+}

@@ -1,0 +1,392 @@
+/* Estilo General */
+/* Esto asegura que todos los elementos incluyan bordes y relleno dentro de su tamaño total */
+
+
+/* Ahora, el resto de tus estilos */
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden; /* Evita el desbordamiento horizontal */
+}
+
+.container {
+  min-height: 100vh; /* Asegura que el contenedor ocupe al menos la altura de la pantalla */
+}
+
+header {
+  background-color: #118185;
+  color: white;
+  padding: 3px;
+  text-align: center;
+}
+header {
+  display: flex;
+  justify-content: space-between; /* Distribuye el contenido a los extremos */
+  align-items: center; /* Alinea verticalmente */
+  padding: 10px 20px; /* Espacio interno */
+}
+
+.header-logo-left img {
+  width: 300px;
+  height: 70px;
+}
+
+.header-logo-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo-right img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px; /* Espacio entre el logo y el nombre */
+}
+
+.header-logo-right span {
+  font-size: 16px; /* Ajusta el tamaño del nombre según sea necesario */
+}
+header h1 {
+  flex-grow: 1; /* Permite que el título crezca y ocupe el espacio disponible */
+  text-align: center; /* Asegura que el texto esté centrado */
+  margin: 0; /* Elimina márgenes predeterminados */
+}
+.main-content {
+  display: grid;
+  grid-template-columns: 23% 47% 30%; /* Define las proporciones de las columnas */
+  gap: 10px; /* Espacio entre columnas */
+  padding: 2px;
+  grid-template-rows: 660px 660px 660px; /* Ajusta la altura de las filas */
+}
+button.selected {
+  background-color: #005959;
+  color: #ffffff;
+}
+
+/* Formulario */
+.formulario {
+  background-color: #c0ecee; /* Color de fondo del formulario */
+  padding: 2px;
+  border-radius: 5px;}
+  
+  label {
+    display: block;
+    margin: 0.25em 0 0.25em; /* Ajusta los márgenes superior e inferior */
+    font-weight: bold;
+    color: #0b4b64; /* Cambia este valor por el color que desees */
+    font-size: 16px; /* Opcional: ajusta el tamaño de la letra */
+    font-weight: bold; /* Opcional: para hacer el texto más destacado */
+  }
+  p {
+    color: #0b4b64; /* Cambia este color al que desees */
+    font-size: 16px; /* Ajusta el tamaño de la letra */
+    font-weight: bold; /* Opcional: texto más destacado */
+  }
+  
+input, select, textarea {
+  width: 100%;
+  padding: 0.2em;
+  margin-bottom: 0.5em; /* Ajusta este margen si es necesario */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+input {
+  width: 100%; /* Se adapta al contenedor */
+  max-width: 100%; /* Evita desbordamientos */
+  margin: 0; /* Elimina márgenes extra */
+  padding: 8px; /* Ajusta el espacio interno */
+  box-sizing: border-box; /* Incluye padding y borde en el ancho */
+  font-family: 'Arial', sans-serif;
+  font-size: 16px; /* Ajustar tamaño de fuente */
+  color: #0c485a; /* Cambiar el color del texto */
+  font-weight: bold; /* Aplica negrita */
+}
+textarea {
+  width: 100%; /* Asegura que ocupe el ancho completo del contenedor */
+  max-width: 100%; /* Evita que se expanda más allá del contenedor */
+  margin: 0; /* Elimina márgenes extra */
+  padding: 8px; /* Ajusta el espacio interno */
+  box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+  resize: vertical; /* Permite redimensionarlo solo en altura */
+}
+
+
+.botones p {
+  font-weight: bold;
+  margin-top: 1em;
+}
+
+button {
+  padding: 0.5em 1em;
+  margin: 0.5em 0.5em 0.5em 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #008080;
+  color: white;
+  cursor: pointer;
+}
+button.selected {
+  background-color: #005959; /* Color de fondo para el botón activo */
+  color: white; /* Texto blanco */
+  border: 2px solid #008080; /* Opcional: borde para resaltar */
+}
+
+button:hover {
+  background-color: #005959;
+}
+/* Ajusta el contenedor de los campos dentro de la columna 2 */
+.tipo-dni-tel {
+  display: flex; /* Usa flexbox para alinear los campos lado a lado */
+  gap: 1rem; /* Espacio entre DNI y Teléfono */
+}
+
+/* Asegura que cada grupo de etiqueta-campo esté alineado correctamente */
+.tipo-dni, .tipo-tel {
+  flex: 1; /* Ambos elementos tendrán el mismo ancho */
+  display: flex;
+  flex-direction: column; /* Etiqueta sobre el input */
+}
+.tipo-urgencia-medico {
+  display: flex;
+  justify-content: space-between; /* Ajusta el espacio entre los dos bloques */
+  gap: 1em; /* Agrega un espacio entre los bloques */
+}
+
+.tipo-urgencia, .tipo-medico {
+  flex: 1; /* Hace que ambos bloques tengan el mismo tamaño */
+}
+
+.tipo-urgencia p, .tipo-medico p {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+
+.menu {
+  width: 250px;
+  background-color: #0B4F52;
+  border-radius: 5px;
+  color: white;
+  padding: 25px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu ul li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none; /* Elimina el subrayado */
+  color: inherit; /* Hereda el color del elemento padre */
+  padding: 10px; /* Espacio interno para el enlace */
+}
+
+.menu ul li a img {
+  margin-right: 10px; /* Espacio entre el icono y el texto */
+}
+
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul li {
+  display: flex;
+  align-items: center;
+  padding: 18px 0;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 9px;
+  transition: background-color 0.3s ease;
+}
+
+.menu ul li:hover {
+  background-color: #118185; /* Efecto hover */
+  color: white;
+}
+
+.menu ul li:active {
+  background-color: white; /* Fondo blanco */
+  color: #0B4F52; /* Texto con el color original del fondo */
+}
+
+.menu ul li img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.menu .logout {
+  text-align: center;
+  margin-top: auto;
+}
+
+.menu .logout button {
+  width: 100%;
+  padding: 10px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.menu .logout button:hover {
+  background-color: #c0392b;
+}
+
+
+
+/* Contenedor de Horario y Calendario */
+.horario-calendario {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #f1f1f1;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.calendar-container,
+.time-container {
+  max-height: 40%; /* Ocupa la mitad del contenedor */
+  overflow-y: auto; /* Scroll para contenido largo */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Calendario */
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 3px;
+}
+
+.day {
+  padding: 5px;
+  font-size: 0.8em;
+  border-radius: 5px;
+  background-color: #e0e7ff;
+  text-align: center;
+  cursor: pointer;
+}
+
+.day:hover,
+.day.selected {
+  background-color: #30a062;
+  color: white;
+}
+
+/* Grid de Horarios */
+.time-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.time-slot {
+  padding: 5px;
+  font-size: 0.8em;
+  border-radius: 5px;
+  background-color: #e0e7ff;
+  text-align: center;
+  cursor: pointer;
+}
+
+.time-slot:hover,
+.time-slot.selected {
+  background-color: #30a062;
+  color: white;
+}
+
+/* Botón de Agendar */
+#schedule-btn {
+  margin-top: 20px;
+  padding: 20px 30px;
+  background-color: #118185;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#schedule-btn:hover {
+  background-color: #0d6c68;
+}
+
+/* Encabezado del Calendario */
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.calendar-header button {
+  background-color: #118185;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.calendar-header button:hover {
+  background-color: #0d6c68;
+}
+
+#current-month {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.modal {
+  display: none; /* Ocultar inicialmente */
+  position: fixed;
+  z-index: 1000; /* Superpone al contenido */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+}
+.modal-content {
+  background-color: #d8ce74; /* Color de fondo del contenido */
+  margin: 10% auto; /* Centrado vertical y horizontal */
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 15px; /* Bordes redondeados */
+  width: 50%; /* Ancho del modal */
+  max-width: 600px; /* Ancho máximo para pantallas grandes */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra elegante */
+  text-align: center;
+}
+#modal-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

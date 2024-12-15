@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agenda tu Consulta</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-logo-left">
+      <img src="logo.jpg" alt="Logo" width="300" height="70">
+    </div>
+    <h1>Agenda tu consulta</h1>
+    <div class="header-logo-right">
+      <img src="logo-paciente.png" alt="Paciente" width="50" height="50">
+      <span id="usuario-nombre"></span>
+
+    </div>
+  </header>
+  
+
+  <div class="main-content">
+    <div class="menu">
+      <ul>
+        <li id="agendar-consulta">
+            <a href="#"><img src="icon-calendar.png" alt="Agendar consulta">Agendar consulta</a>
+          </li>
+          
+        <li><a href="perfil.html"><img src="icon-profile.png" alt="Perfil">Mi Perfil</a></li>
+        <li><a href="agenda-turnos.html"><img src="icon-schedule.png" alt="Agenda">Mi agenda de turnos</a></li>
+        <li><a href="consultas-anteriores.html"><img src="icon-history.png" alt="Consultas anteriores">Ver consultas anteriores</a></li>
+        <li><a href="historial-recetas.html"><img src="icon-prescription.png" alt="Recetas electrónicas">Historial recetas electrónicas</a></li>
+        <li><a href="../index.html"><img src="icon-logout.png" alt="Cerrar sesión">Cerrar Sesión</a></li>
+            </ul>
+    </div>
+    <div class="formulario">
+      <!-- Otros campos del formulario -->
+
+      <script src="autocompletado.js"></script> <!-- Llamada al archivo de JavaScript -->
+
+      <label for="nombre">Nombre y Apellido</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Nombre y Apellido" autocomplete="name">
+      
+      <div class="tipo-dni-tel">
+        <div class="tipo-dni">
+          <label for="dni">DNI</label>
+          <input type="text" id="dni" name="dni" placeholder="DNI" autocomplete="off">
+        </div>
+        <div class="tipo-tel">
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" autocomplete="tel">
+        </div>
+      </div>
+
+      <label for="email">Correo Electrónico</label>
+      <input type="email" id="email" name="email" placeholder="Correo Electrónico" autocomplete="email">
+      
+      <div class="tipo-dia-hora">
+        <div class="tipo-dia">
+          <label for="dia">Día</label>  
+          <input type="date" id="dia" name="dia" placeholder="día" autocomplete="off">
+          
+        </div>
+        <div class="tipo-hora">
+          <label for="hora">Hora</label>
+          <input type="time" id="hota" name="hora" placeholder="Hora" autocomplete="hora">
+        </div>
+      </div>
+       
+         
+      <div class="tipo-urgencia-medico">
+        <div class="tipo-urgencia">
+          <p>Tipo de urgencia:</p>
+          <button id="urgente">Urgente</button>
+          <button id="no-urgente">No urgente</button>
+        </div>
+        <div class="tipo-medico">
+          <p>Tipo de médico:</p>
+          <button id="generalista">Generalista</button>
+          <button id="especialista">Especialista</button>
+        </div>
+      </div>
+    
+      <label for="especialidad">Especialidad</label>
+      <select id="especialidad">
+        <option value="">Seleccione una especialidad</option>
+        <option value="cardiologia">Cardiología</option>
+        <option value="pediatria">Pediatría</option>
+        <option value="traumatologia">Traumatología</option>
+        <option value="dermatologia">Dermatología</option>
+        <option value="neurologia">Neurología</option>
+        <option value="oftalmologia">Oftalmología</option>
+        <option value="ginecologia">Ginecología</option>
+        <option value="urologia">Urología</option>
+        <option value="endocrinologia">Endocrinología</option>
+        <option value="psiquiatria">Psiquiatría</option>
+      </select>
+    
+      <label for="motivo">Motivo de la consulta</label>
+      <textarea id="motivo" rows="5" placeholder="Describe el motivo de la consulta"></textarea>
+     
+    </div>
+    
+    <div class="horario-calendario">
+        
+        <div class="calendar-container">
+            <div class="calendar-header">
+                <button id="prev-month">Anterior</button>
+                <h3 id="current-month">Mes actual</h3>
+                <button id="next-month">Siguiente</button>
+            </div>
+        
+                <h3>Selecciona una fecha</h3>
+                <div class="calendar" id="calendar"></div>
+                <div class="output" id="selected-date">Fecha seleccionada: </div>
+            </div>
+    
+            <div class="time-container">
+                <h3>Selecciona una hora</h3>
+                <div class="time-grid" id="time-grid"></div>
+                <div class="output" id="selected-time">Hora seleccionada: </div>
+            </div>
+    
+        </div>
+     </div>
+  <script src="script.js"></script>
+  <script src="modal.js"></script>
+<!-- Modal -->
+<div id="modal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Datos de la Cita</h2>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+  
+
+</body>
+
+  
+</html>
